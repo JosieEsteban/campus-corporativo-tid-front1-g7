@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mis cursos</title>
+        <link rel="stylesheet" href="/css/css.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+
+    </head>
+    <body class="bodyMatricula">
+        
+    <header class="headerMatricula">
+        <nav class="navbarMatricula">
+            <div class="logo">
+            <img src="/img/recursos/sura-logo-white.png" alt="Logo SURA">
+            </div>
+
+            <div class="div-links">
+                <a href="../../Index.html">Inicio</a>
+              <a href="../Registro/login.html">Iniciar sesion</a>
+              <a href="/index.html">Inscripciones</a>
+              <a href="../../Index.html">Catálogo</a>
+              <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
+              <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
+            
+            </div>
+
+            <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <i>🔍</i>
+            </div>
+        </nav>
+    </header> 
+
+
+
+               <section>
+
+                <h2 class="h2matrucula">Informacion General de los cursos</h2> 
+
+             <h3 class="h3matrucula"> Maxim de alumnos permitidos por curso:  20 </h3>
+
+               </section>
+       
+      
+
+
+               <div class="vertical_position_section">
+
+
+
+              
+
+            <table border="1" class="tabla_cursos">
+
+                    <thead>
+                    
+                    
+
+                    
+
+                    </thead>
+
+                    <tbody id="tabla_cursos">
+
+
+                        <tr>
+                            <th>Curso</th>
+                            <th>Fecha de Inscripción</th>
+                            <td>Fecha fin</td>
+                            <th>Estado</th>
+                            <th>Colaborador</th>
+                            <th>CUPOS / #. Alum_Matriculados</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>Anatomía</td>
+                            <td>2025-10-12</td>
+                            <td>2026-01-31</td>
+                            <td>Aprobado</td>
+                            <td>Carlos pinto</td>
+                            <td>Cupos: 8 - Alumnos: 11</td>
+                        </tr>
+
+                        
+
+                        <tr>
+                            <td>Etica</td>
+                            <td>2025-09-18</td>
+                            <td>2025-12-15</td>
+                            <td>Aprobado</td>
+                            <td> Beatriz Cortez</td>
+                             <td>Cupo: 5 - Alumnos: 15</td>
+                        </tr>
+
+                        <tr>
+                            <td>Electronico</td>
+                            <td>2025-10-10</td>
+                            <td> -- </td>
+                            <td>Pendiente</td>
+                            <td>Abigail Trejos</td>
+                             <td>Cupo: 14 - Alumnos: 6</td>
+                        </tr>
+
+                        
+                    </tbody>
+            </table>
+
+        </div>
+
+ 
+        
+     <div class="botones-orden">
+
+
+
+    
+             
+         <a  class="botonMatricula"  href="../src/detalle-curso.html"> DETALLES DEL CURSO</a>
+
+
+     <a  class="botonMatricula"  href="../index.html"> AGREGAR CURSO</a>
+
+</div>
+
+              <script>
+                const matriculas = [];
+
+
+                function mostrarSeccion(id){
+                document.getElementById('formulario').style.display = 'none';
+                document.getElementById('matricula').style.display = 'none';
+                document.getElementById(id).style.display = 'block';
+                }
+
+
+                document.getElementById('formInscripcion').addEventListener('submit', function(e){
+                e.preventDefault();
+                const curso = document.getElementById('curso').value;
+
+
+                if(curso === 'Farmacología'){
+                document.getElementById('resultado').innerHTML = '<p>El curso seleccionado está lleno. Por favor elija otro.</p>';
+                return;
+                }
+
+
+                const fecha = new Date().toLocaleDateString();
+                const estado = 'pendiente';
+
+
+                matriculas.push({curso, fecha, estado});
+                mostrarMatriculas();
+                document.getElementById('resultado').innerHTML = `<p>Inscripción enviada para ${curso}. Estado inicial: <strong>${estado}</strong></p>`;
+                document.getElementById('formInscripcion').reset();
+                });
+
+
+                function mostrarMatriculas(){
+                const tabla = document.getElementById('tablaMatriculas');
+                tabla.innerHTML = '';
+                matriculas.forEach((m, index) => {
+                const fila = `<tr>
+                <td>${m.curso}</td>
+                <td>${m.fecha}</td>
+                <td id='estado-${index}'>${m.estado}</td>
+                <td><button onclick='cambiarEstado(${index})'>Cambiar Estado</button></td>
+                </tr>`;
+                tabla.innerHTML += fila;
+                });
+                }
+
+
+                function cambiarEstado(index){
+                const estados = ['pendiente', 'en proceso', 'aprobado', 'rechazado'];
+                const actual = matriculas[index].estado;
+                const siguiente = estados[(estados.indexOf(actual) + 1) % estados.length];
+                matriculas[index].estado = siguiente;
+                document.getElementById(`estado-${index}`).innerText = siguiente;
+                }
+            </script>
+
+<footer class="footerMatricula">
+    <p>© 2025 Campus Corporativo TID  Grupo 2: Gestion de inscripciones</p>
+  </footer>
+          
+    
+    </body>
+</html>

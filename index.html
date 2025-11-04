@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proceso de inscripcion </title>
+    <link rel="stylesheet" href="/css/css.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body class="bodyMatricula">
+    <header class="headerMatricula">
+        <nav class="navbarMatricula">
+            <div class="logo">
+            <img src="../../img/recursos/sura-logo-white.png" alt="Logo SURA">
+            </div>
+
+            <div class="div-links">
+              <a href="../../Index.html">Inicio</a>
+              <a href="../Registro/login.html">Iniciar sesion</a>
+              <a href="/index.html">Inscripciones</a>
+              <a href="../../Index.html">Catálogo</a>
+              <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
+              <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
+            
+            </div>
+
+            <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <i>🔍</i>
+            </div>
+        </nav>
+    </header> 
+
+    <main>
+      <h1 class="h1matrucula">✦✦ Sistema de Inscripción y Matrícula</h1>
+
+      <section id="formulario" class="seccion">
+        <h2 class="h2matrucula">Formulario de Inscripción</h2>
+
+        <form class="formulario" class="posicion">
+          <fieldset>
+            <legend>Datos personales del Colaborador</legend>
+            <br />
+            <div class="posicion">
+              <label class="labelMatricula">Nombre:</label><br />
+              <input
+                type="text"
+                id="nombre"
+                required
+                class="posicion"
+              /><br /><br />
+            </div>
+            <div class="posicion">
+              <label class="labelMatricula">Apellido:</label> <br />
+              <input type="text" id="apellido" required /><br /><br />
+            </div>
+
+            <div class="posicion">
+              <label class="labelMatricula">Genero</label><br />
+
+              <select id="Genero" required>
+                <option value="">Seleccione...</option>
+                <option value="">Masculino</option>
+                <option value="">Femino</option>
+                <option value="">No binario</option></select
+              ><br /><br />
+            </div>
+
+            <div class="posicion">
+              <label class="labelMatricula">Nivel Acadamico</label><br />
+              <select id="Nivel Acadamico" required>
+                <option value="">Seleccione...</option>
+                <option value="">Bachiller</option>
+                <option value="">Tecnico</option>
+                <option value="">Tecnologo</option>
+                <option value="">Profesional</option></select
+              ><br /><br />
+            </div>
+
+            <div class="posicion">
+              <label class="labelMatricula">Tipo de Documento:</label><br />
+              <select id="tipoDocumento" required>
+                <option value="">Seleccione...</option>
+                <option value="Cédula de ciudadanía">
+                  Cédula de ciudadanía
+                </option>
+                <option value="Tarjeta de identidad">
+                  Tarjeta de identidad
+                </option>
+                <option value="Cédula de extranjería">
+                  Cédula de extranjería
+                </option>
+                <option value="Permiso temporal">
+                  Permiso temporal
+                </option></select
+              ><br /><br />
+            </div>
+
+            <div class="posicion">
+              <label class="labelMatricula">Número de identificación:</label><br />
+              <input type="number" id="numeroId" required /><br /><br />
+            </div>
+
+            <div class="posicion">
+              <label class="labelMatricula">Fecha de Nacimiento:</label><br />
+              <input type="date" id="numeroId" required /><br /><br />
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset_BOX">
+            <legend>Datos de Residencia</legend>
+            <br />
+            <div class="posicion">
+              <label class="labelMatricula">Dirección de residencia:</label><br />
+              <input type="text" id="direccion" required /><br /><br />
+            </div>
+            <div class="posicion">
+              <label>Estrato socioeconomico:</label><br />
+              <select id="tipoDocumento" required>
+                <option value="">Seleccione...</option>
+                <option value="Estrato 1">Estrato 1</option>
+                <option value="Estrato 2">Estrato 2</option>
+                <option value="Estrato 3">Estrato 3</option>
+                <option value="Estrato 4">Estrato 4</option>
+                <option value="Estrato 5">Estrato 5</option>
+                <option value="Estrato 6">Estrato 6</option></select
+              ><br /><br />
+            </div>
+
+            <div class="posicion">
+              <label class="labelMatricula">Municipio de residencia:</label><br />
+              <input type="text" id="municipio" required /><br /><br />
+            </div>
+            <div class="posicion">
+              <label class="labelMatricula">Departamento de residencia:</label><br />
+              <input type="text" id="departamento" required /><br /><br />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos de contacto</legend>
+            <br />
+            <div class="posicion">
+              <label class="labelMatricula">Correo electrónico:</label><br />
+              <input
+                type="email"
+                id="correo electronico"
+                required
+              /><br /><br />
+            </div>
+            <div class="posicion">
+              <label class="labelMatricula">Número de celular:</label><br />
+              <input type="tel" id="celular" required /><br /><br />
+            </div>
+            <div class="posicion">
+              <label class="labelMatricula">Número de celular alterno:</label><br />
+              <input type="tel" id="celular" required /><br /><br />
+            </div>
+            <div class="posicion">
+              <label class="labelMatricula">Numero fijo</label><br />
+              <input type="tel" id="Fijo" required /><br /><br />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Programas disponibles</legend>
+            <br />
+            <label class="labelMatricula">Seleccione un curso o programa:</label><br />
+            <select id="curso">
+              <option value="Anatomía I">
+                Anatomía I (40 Cupos disponibles)
+              </option>
+              <option value="Farmacología">Farmacología (Lleno)</option>
+              <option value="Ética Profesional">
+                Ética Profesional (12 Cupos disponibles)
+              </option>
+              <option value="Salud Comunitaria">
+                Salud Comunitaria (13 Cupos disponibles)
+              </option></select
+            ><br /><br />
+          </fieldset>
+          <!--<button type="submit" class="botonMatricula">Enviar Formulario</button>-->
+
+          <button class="botonMatricula" onclick="window.location.href='Estado matricula.html'">
+            Enviar Formulario
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footerMatricula">
+      <p>© 2025 Campus Corporativo TID  Grupo 2: Gestion de inscripciones</p>
+    </footer>
+
+       // Módulos ES (import/export) configurados (script principal con type="module").
+
+       <script type="module" src="/src/script.js"></script>
+
+
+     <script src="/src/script.js"></script>
+       
+  </body>
+</html>
