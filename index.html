@@ -12,7 +12,7 @@
     <header class="headerMatricula">
       <nav class="navbarMatricula">
         <div class="logo">
-          <img src="/campus-corporativo-tid-front1-g7-modulo-3-gestion-de-inscripciones/src/assets/images/Imagenes-Matricula/sura-logo.png" alt="Logo SURA">
+          <img src="/src/assets/images/Imagenes-Matricula/sura-logo.png" alt="Logo SURA">
         </div>
 
         <div class="div-links">
@@ -36,24 +36,25 @@
       <h1 class="h1matrucula">✦✦ Sistema de Inscripción y Matrícula</h1>
 
       <section id="formulario" class="seccion">
-        <h2 class="h2matrucula">Formulario de Inscripción</h2>
+        <h2 class="color-de-titulos"  class="h2matrucula">Formulario de Inscripción</h2>
 
         <form class="formulario posicion">
-          <fieldset>
-            <legend>Datos personales del Colaborador</legend>
+          <fieldset class="border-radiuss">
+            <legend class="color-de-titulos">Datos personales del Colaborador</legend>
             <br />
             <div class="posicion">
-              <label class="labelMatricula">Nombre:</label><br />
+              <label class="labelMatricula"> Nombre:</label><br />
               <input
                 type="text"
                 id="nombre"
                 required
-                class="posicion"
+                 class="border-radiuss"
+                
               /><br /><br />
             </div>
             <div class="posicion">
               <label class="labelMatricula">Apellido:</label> <br />
-              <input type="text" id="apellido" required /><br /><br />
+              <input type="text" id="apellido" required  class="border-radiuss" /><br /><br />
             </div>
 
             <div class="posicion">
@@ -98,21 +99,21 @@
 
             <div class="posicion">
               <label class="labelMatricula">Número de identificación:</label><br />
-              <input type="number" id="numeroId" required /><br /><br />
+              <input type="number" id="numeroId" required  class="border-radiuss" /><br /><br />
             </div>
 
             <div class="posicion">
               <label class="labelMatricula">Fecha de Nacimiento:</label><br />
-              <input type="date" id="fechaNacimiento" required /><br /><br />
+              <input class="border-radiuss" type="date" id="fechaNacimiento" required /><br /><br />
             </div>
           </fieldset>
 
-          <fieldset class="fieldset_BOX">
-            <legend>Datos de Residencia</legend>
+          <fieldset class="fieldset_BOX" class="border-radiuss">
+            <legend class="color-de-titulos">Datos de Residencia</legend>
             <br />
             <div class="posicion">
               <label class="labelMatricula">Dirección de residencia:</label><br />
-              <input type="text" id="direccion" required /><br /><br />
+              <input class="border-radiuss" type="text" id="direccion" required /><br /><br />
             </div>
             <div class="posicion">
               <label>Estrato socioeconomico:</label><br />
@@ -129,16 +130,18 @@
 
             <div class="posicion">
               <label class="labelMatricula">Municipio de residencia:</label><br />
-              <input type="text" id="municipio" required /><br /><br />
+              <input type="text" id="municipio" required class="border-radiuss" /><br /><br />
             </div>
             <div class="posicion">
               <label class="labelMatricula">Departamento de residencia:</label><br />
-              <input type="text" id="departamento" required /><br /><br />
+              <input type="text" id="departamento" required class="border-radiuss" /><br /><br />
             </div>
           </fieldset>
 
-          <fieldset>
-            <legend>Datos de contacto</legend>
+
+       
+          <fieldset class="border-radiuss" >
+            <legend class="color-de-titulos" >Datos de contacto</legend>
             <br />
             <div class="posicion">
               <label class="labelMatricula">Correo electrónico:</label><br />
@@ -146,24 +149,28 @@
                 type="email"
                 id="correo"
                 required
+                class="border-radiuss"
               /><br /><br />
             </div>
             <div class="posicion">
               <label class="labelMatricula">Número de celular:</label><br />
-              <input type="tel" id="celular" required /><br /><br />
+              <input type="tel" id="celular" required class="border-radiuss" /><br /><br />
             </div>
             <div class="posicion">
               <label class="labelMatricula">Número de celular alterno:</label><br />
-              <input type="tel" id="celularAlterno" /><br /><br />
+              <input type="tel" id="celularAlterno" class="border-radiuss"/><br /><br />
             </div>
             <div class="posicion">
               <label class="labelMatricula">Numero fijo</label><br />
-              <input type="tel" id="fijo" /><br /><br />
+              <input class="border-radiuss" type="tel" id="fijo" /><br /><br />
             </div>
           </fieldset>
 
+
+
+
           <fieldset>
-            <legend>Programas disponibles</legend>
+            <legend class="color-de-titulos">Programas disponibles</legend>
             <br />
             <label class="labelMatricula">Seleccione un curso o programa:</label><br />
             <select id="curso">
