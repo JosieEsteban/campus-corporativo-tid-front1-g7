@@ -3,34 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proceso de inscripcion </title>
-    <link rel="stylesheet" href="/src/styles/css.css" />
+    <title>Proceso de inscripcion</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="/src/styles/style.css" />
   </head>
 
   <body class="bodyMatricula">
     <header class="headerMatricula">
-        <nav class="navbarMatricula">
-            <div class="logo">
-            <img src="/src/assets/images/Imagenes-Matricula/sura-logo.png" alt="Logo SURA">
-            </div>
+      <nav class="navbarMatricula">
+        <div class="logo">
+          <img src="/campus-corporativo-tid-front1-g7-modulo-3-gestion-de-inscripciones/src/assets/images/Imagenes-Matricula/sura-logo.png" alt="Logo SURA">
+        </div>
 
-            <div class="div-links">
-              <a href="../../Index.html">Inicio</a>
-              <a href="../Registro/login.html">Iniciar sesion</a>
-              <a href="/index.html">Inscripciones</a>
-              <a href="../../Index.html">Catálogo</a>
-              <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
-              <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
-            
-            </div>
+        <div class="div-links">
+          <a href="../../Index.html">Inicio</a>
+          <a href="../Registro/login.html">Iniciar sesion</a>
+          <a href="/index.html">Inscripciones</a>
+          <a href="../../Index.html">Catálogo</a>
+          <a href="../Comunicaciones/COMUNICACIONES_INT.html">Comunicaciones</a>
+          <a href="../PerColaborador/PerColaborador.html">Perfil del colaborador</a>
 
-            <div class="search-bar">
-            <input type="text" placeholder="Buscar...">
-            <i>🔍</i>
-            </div>
-        </nav>
-    </header> 
+        </div>
+
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar...">
+          <i>🔍</i>
+        </div>
+      </nav>
+    </header>
 
     <main>
       <h1 class="h1matrucula">✦✦ Sistema de Inscripción y Matrícula</h1>
@@ -38,7 +38,7 @@
       <section id="formulario" class="seccion">
         <h2 class="h2matrucula">Formulario de Inscripción</h2>
 
-        <form class="formulario" class="posicion">
+        <form class="formulario posicion">
           <fieldset>
             <legend>Datos personales del Colaborador</legend>
             <br />
@@ -58,23 +58,22 @@
 
             <div class="posicion">
               <label class="labelMatricula">Genero</label><br />
-
-              <select id="Genero" required>
+              <select id="genero" required>
                 <option value="">Seleccione...</option>
-                <option value="">Masculino</option>
-                <option value="">Femino</option>
-                <option value="">No binario</option></select
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="No binario">No binario</option></select
               ><br /><br />
             </div>
 
             <div class="posicion">
               <label class="labelMatricula">Nivel Acadamico</label><br />
-              <select id="Nivel Acadamico" required>
+              <select id="nivelAcademico" required>
                 <option value="">Seleccione...</option>
-                <option value="">Bachiller</option>
-                <option value="">Tecnico</option>
-                <option value="">Tecnologo</option>
-                <option value="">Profesional</option></select
+                <option value="Bachiller">Bachiller</option>
+                <option value="Tecnico">Tecnico</option>
+                <option value="Tecnologo">Tecnologo</option>
+                <option value="Profesional">Profesional</option></select
               ><br /><br />
             </div>
 
@@ -104,7 +103,7 @@
 
             <div class="posicion">
               <label class="labelMatricula">Fecha de Nacimiento:</label><br />
-              <input type="date" id="numeroId" required /><br /><br />
+              <input type="date" id="fechaNacimiento" required /><br /><br />
             </div>
           </fieldset>
 
@@ -117,7 +116,7 @@
             </div>
             <div class="posicion">
               <label>Estrato socioeconomico:</label><br />
-              <select id="tipoDocumento" required>
+              <select id="estrato" required>
                 <option value="">Seleccione...</option>
                 <option value="Estrato 1">Estrato 1</option>
                 <option value="Estrato 2">Estrato 2</option>
@@ -145,7 +144,7 @@
               <label class="labelMatricula">Correo electrónico:</label><br />
               <input
                 type="email"
-                id="correo electronico"
+                id="correo"
                 required
               /><br /><br />
             </div>
@@ -155,11 +154,11 @@
             </div>
             <div class="posicion">
               <label class="labelMatricula">Número de celular alterno:</label><br />
-              <input type="tel" id="celular" required /><br /><br />
+              <input type="tel" id="celularAlterno" /><br /><br />
             </div>
             <div class="posicion">
               <label class="labelMatricula">Numero fijo</label><br />
-              <input type="tel" id="Fijo" required /><br /><br />
+              <input type="tel" id="fijo" /><br /><br />
             </div>
           </fieldset>
 
@@ -168,6 +167,7 @@
             <br />
             <label class="labelMatricula">Seleccione un curso o programa:</label><br />
             <select id="curso">
+              <option value="">Seleccione un curso...</option>
               <option value="Anatomía I">
                 Anatomía I (40 Cupos disponibles)
               </option>
@@ -180,9 +180,7 @@
               </option></select
             ><br /><br />
           </fieldset>
-          <!--<button type="submit" class="botonMatricula">Enviar Formulario</button>-->
-
-          <button class="botonMatricula" onclick="window.location.href='Estado matricula.html'">
+          <button type="submit" class="botonMatricula">
             Enviar Formulario
           </button>
         </form>
@@ -190,15 +188,10 @@
     </main>
 
     <footer class="footerMatricula">
-      <p>© 2025 Campus Corporativo TID  Grupo 2: Gestion de inscripciones</p>
+      <p>© 2025 Campus Corporativo TID Grupo 2: Gestion de inscripciones</p>
     </footer>
 
-       // Módulos ES (import/export) configurados (script principal con type="module").
+    <script src="/campus-corporativo-tid-front1-g7-modulo-3-gestion-de-inscripciones/src/controllers/script.js"></script>
 
-       <script type="module" src="/src/script.js"></script>
-
-
-     <script src=""></script>
-       
   </body>
 </html>
